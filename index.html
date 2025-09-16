@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KATSU Madrid — Restaurante japonés</title>
+  <meta name="description" content="KATSU Madrid · Japanese Comfort Food en Malasaña y Castellana. Reserva online, consulta la carta en PDF y encuentra nuestros horarios y contacto." />
+  <meta name="theme-color" content="#8c0f12">
+  <link rel="canonical" href="https://katsumadrid.com/">
+  <!-- OG / Twitter -->
+  <meta property="og:title" content="KATSU Madrid — Restaurante japonés" />
+  <meta property="og:description" content="Japanese Comfort Food en Malasaña y Castellana. Reserva online y consulta la carta." />
+  <meta property="og:image" content="Logo.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: '#8c0f12', brandLight: '#a61619', brandDark:'#64090b', paper: '#F8F6F1' },
+          fontFamily: { sans: ['Inter','system-ui','-apple-system','Segoe UI','sans-serif'], display: ['Oswald','Inter','sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body { background:#8c0f12; color:#F8F6F1; }
+    .wrap { max-width: 960px; margin-inline: auto; padding: 0 1rem; }
+    .card { background: rgba(248,246,241,0.06); border: 1px solid rgba(248,246,241,0.14); }
+    /* Animations */
+    @keyframes fadeIn { from { opacity:0; transform: translateY(6px); } to { opacity:1; transform: none; } }
+    .fade-in { opacity:0; }
+    .fade-in.is-visible { animation: fadeIn .6s ease-out forwards; }
+    @keyframes fadeZoom { from { opacity:0; transform: scale(.95); } to { opacity:1; transform: scale(1); } }
+    .fade-zoom { opacity:0; transform: scale(.95); }
+    .fade-zoom.is-visible { animation: fadeZoom .8s cubic-bezier(.22,.61,.36,1) forwards; }
+    /* Optical baseline alignment: slight downward nudge on claim */
+    .baseline-nudge { transform: translateY(2px); }
+    @media (min-width: 768px) { .baseline-nudge { transform: translateY(3px); } }
+  </style>
+</head>
+<body class="font-sans font-medium">
+  <!-- HERO -->
+  <header class="min-h-[70vh] grid place-items-center text-center">
+    <div class="wrap pt-20 pb-16 md:pt-28 md:pb-20">
+      <!-- Claim (Food.png), 65% width of logo + optical baseline alignment -->
+      <img src="Food.png" alt="Japanese Comfort Food (日本の心のこもった料理)"
+           class="fade-zoom baseline-nudge mx-auto max-w-[65%] md:max-w-[420px] h-auto" />
+      <!-- Logo bigger below, very close spacing for harmony -->
+      <img src="Logo.png" alt="KATSU Madrid (logotipo)"
+           class="fade-in mx-auto mt-5 w-[440px] md:w-[560px] lg:w-[640px] h-auto" />
+      <!-- Botones de reserva -->
+      <div class="mt-10 grid sm:grid-cols-2 gap-3">
+        <a href="https://www.covermanager.com/reservation/module_restaurant/katsu/spanish?utm_source=web&utm_medium=cta&utm_campaign=reservas_home&loc=malasana"
+           target="_blank" rel="noopener"
+           class="group block rounded-none bg-paper text-black px-6 py-3 font-semibold text-center shadow transition
+                  hover:bg-brandLight hover:text-paper hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0
+                  focus:outline-none focus:ring-2 focus:ring-black/70 focus:ring-offset-2 focus:ring-offset-brand">
+           Reservar — Malasaña</a>
+        <a href="https://www.covermanager.com/reservation/module_restaurant/restaurante-katsu-san-german/spanish?utm_source=web&utm_medium=cta&utm_campaign=reservas_home&loc=castellana"
+           target="_blank" rel="noopener"
+           class="group block rounded-none border border-paper/60 px-6 py-3 font-semibold text-center text-paper transition
+                  hover:bg-paper hover:text-black hover:border-paper hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0
+                  focus:outline-none focus:ring-2 focus:ring-paper focus:ring-offset-2 focus:ring-offset-brand">
+           Reservar — Castellana</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap py-10">
+    <!-- Foto mosaico + Carta -->
+    <section class="py-10 md:py-16">
+      <div class="flex justify-center">
+        <img src="fotos_ comida.png" alt="Mosaico de platos y ambiente de KATSU"
+             class="w-[78%] md:w-[66%] lg:w-[56%] rounded-2xl shadow-lg fade-in" />
+      </div>
+      <div class="text-center mt-8">
+        <a href="Menu.pdf" target="_blank" rel="noopener"
+           class="inline-block rounded-none bg-paper text-black px-6 py-3 font-semibold shadow transition
+                  hover:bg-brandLight hover:text-paper hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0
+                  focus:outline-none focus:ring-2 focus:ring-black/70 focus:ring-offset-2 focus:ring-offset-brand">
+           Ver carta (PDF)</a>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="py-12 border-t border-paper/10">
+      <h2 class="text-2xl font-semibold text-center">Contacto</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <article class="card rounded-2xl p-6 fade-in">
+          <h3 class="text-xl font-semibold">Malasaña</h3>
+          <p>Calle de la Luna, 22 · 28004 Madrid</p>
+          <p>Tel: <a href="tel:+34912133078" class="underline">912 133 078</a></p>
+          <ul class="mt-3 text-sm opacity-90 space-y-1">
+            <li>Martes — Jueves: 13:00–16:30 · 19:30–23:30</li>
+            <li>Viernes — Domingo: 13:00–17:00 · 19:30–23:30</li>
+            <li>Lunes: Cerrado</li>
+          </ul>
+        </article>
+        <article class="card rounded-2xl p-6 fade-in">
+          <h3 class="text-xl font-semibold">Castellana</h3>
+          <p>C. de San Germán, 5 · 28020 Madrid</p>
+          <p>Tel: <a href="tel:+34916125714" class="underline">916 125 714</a></p>
+          <ul class="mt-3 text-sm opacity-90 space-y-1">
+            <li>Martes — Jueves: 13:00–16:30 · 19:30–23:30</li>
+            <li>Viernes — Domingo: 13:00–17:00 · 19:30–23:30</li>
+            <li>Lunes: Cerrado</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-paper/10">
+    <div class="wrap py-10 text-sm text-center opacity-80">
+      © <span id="year"></span> KATSU Madrid
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const els = document.querySelectorAll('.fade-in, .fade-zoom');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('is-visible'); });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+    els.forEach(el=> io.observe(el));
+  </script>
+</body>
+</html>
