@@ -37,22 +37,19 @@
     @keyframes fadeZoom { from { opacity:0; transform: scale(.95); } to { opacity:1; transform: scale(1); } }
     .fade-zoom { opacity:0; transform: scale(.95); }
     .fade-zoom.is-visible { animation: fadeZoom .8s cubic-bezier(.22,.61,.36,1) forwards; }
-    /* Optical baseline alignment: slight downward nudge on claim */
-    .baseline-nudge { transform: translateY(2px); }
-    @media (min-width: 768px) { .baseline-nudge { transform: translateY(3px); } }
   </style>
 </head>
 <body class="font-sans font-medium">
   <!-- HERO -->
-  <header class="min-h-[70vh] grid place-items-center text-center">
+  <header class="min-h-[72vh] grid place-items-center text-center">
     <div class="wrap pt-20 pb-16 md:pt-28 md:pb-20">
-      <!-- Claim (Food.png), 65% width of logo + optical baseline alignment -->
-      <img src="Food.png" alt="Japanese Comfort Food (日本の心のこもった料理)"
-           class="fade-zoom baseline-nudge mx-auto max-w-[65%] md:max-w-[420px] h-auto" />
-      <!-- Logo bigger below, very close spacing for harmony -->
+      <!-- Logo arriba -->
       <img src="Logo.png" alt="KATSU Madrid (logotipo)"
-           class="fade-in mx-auto mt-5 w-[440px] md:w-[560px] lg:w-[640px] h-auto" />
-      <!-- Botones de reserva -->
+           class="fade-in mx-auto w-[440px] md:w-[560px] lg:w-[640px] h-auto" />
+      <!-- Claim debajo, al 70% ancho -->
+      <img src="Food.png" alt="Japanese Comfort Food (日本の心のこもった料理)"
+           class="fade-zoom mx-auto mt-6 max-w-[70%] md:max-w-[460px] lg:max-w-[480px] h-auto" />
+      <!-- Botones reserva -->
       <div class="mt-10 grid sm:grid-cols-2 gap-3">
         <a href="https://www.covermanager.com/reservation/module_restaurant/katsu/spanish?utm_source=web&utm_medium=cta&utm_campaign=reservas_home&loc=malasana"
            target="_blank" rel="noopener"
