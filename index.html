@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KATSU Madrid · Japanese Comfort Food | Restaurantes en Malasaña y Castellana</title>
+  <meta name="description" content="KATSU Madrid: Japanese Comfort Food en Malasaña y Castellana. Reserva online, consulta el menú (PDF), direcciones, teléfonos y horarios." />
+  <link rel="canonical" href="https://katsumadrid.com/">
+  <meta name="theme-color" content="#F4F2E9">
+  <!-- OG/Twitter -->
+  <meta property="og:title" content="KATSU Madrid · Japanese Comfort Food"/>
+  <meta property="og:description" content="Reserva en KATSU (Malasaña y Castellana), consulta menú y horarios."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://katsumadrid.com/"/>
+  <meta property="og:image" content="a7fgs7.gif"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="KATSU Madrid · Japanese Comfort Food"/>
+  <meta name="twitter:description" content="Reserva, menú, direcciones y horarios."/>
+  <meta name="twitter:image" content="a7fgs7.gif"/>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { paper: '#F4F2E9', brand: '#8c0f12', ink: '#111111', btnbg:'#931813', btntext:'#F4F2E9' }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background:#F4F2E9; color:#111; }
+    .wrap { max-width: 1100px; margin-inline:auto; padding: 0 1rem; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; padding:1rem 1.5rem; min-width:220px; background:#931813; color:#F4F2E9; font-weight:600; letter-spacing:.2px; transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease; box-shadow:0 1px 0 rgb(0 0 0 /.06); border:none; border-radius:8px; }
+    .btn:hover { transform: translateY(-1px) scale(1.02); box-shadow:0 6px 16px rgb(0 0 0 /.12); background:#a31a19; }
+    .btn:focus { outline: none; box-shadow: 0 0 0 3px rgb(147 24 19 / .30); }
+    .card { background: none; border: none; box-shadow: none; }
+    /* HERO full height on mobile with fallbacks */
+    :root { --vh: 1vh; }
+    .hero {
+  height: 100dvh;
+  height: 100svh;
+  height: -webkit-fill-available;
+  height: calc(var(--vh, 1vh) * 100);
+  padding-top: max(24px, env(safe-area-inset-top));
+  padding-bottom: max(40px, env(safe-area-inset-bottom));
+}
+    @media (min-width: 768px) {
+      .hero {
+  height: 100dvh;
+  height: 100svh;
+  height: -webkit-fill-available;
+  height: calc(var(--vh, 1vh) * 100);
+  padding-top: max(24px, env(safe-area-inset-top));
+  padding-bottom: max(40px, env(safe-area-inset-bottom));
+}
+    }
+  
+/* Animations */
+@keyframes slideDown { from { opacity:0; transform: translateY(-14px); } to { opacity:1; transform: translateY(0); } }
+@keyframes slideUp { from { opacity:0; transform: translateY(16px); } to { opacity:1; transform: translateY(0); } }
+.hero-top, .hero-bottom { opacity:0; }
+.boot .hero-top { animation: slideDown .8s ease-out .06s both; }
+.boot .hero-bottom { animation: slideUp .8s ease-out .18s both; }
+
+/* Reveal on scroll */
+.reveal { opacity:0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; will-change: opacity, transform; }
+.reveal.in { opacity:1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .boot .hero-top, .boot .hero-bottom { animation: none; opacity:1; transform:none; }
+  .reveal { transition: none; opacity:1; transform:none; }
+}
+
+/* Button active */
+.btn:active { transform: translateY(0) scale(0.99); }
+  </style>
+
+  <link rel="preload" as="image" href="a7fgs7.gif">
+  <link rel="preload" as="image" href="Letras.png">
+</head>
+<body>
+  <header class="wrap py-4 md:py-6"></header>
+
+  <main class="wrap">
+    <h1 class="sr-only">KATSU Madrid · Japanese Comfort Food</h1>
+
+    <!-- HERO: logo arriba, letras abajo; ocupa 100% viewport en móvil -->
+    <section class="hero flex flex-col justify-between items-center text-center">
+      <div class="hero-top">
+        <img src="a7fgs7.gif" alt="KATSU — logotipo" width="240" height="120"
+             class="mx-auto w-[180px] md:w-[210px] lg:w-[240px] h-auto" />
+      </div>
+      <div class="hero-bottom">
+        <img src="Letras.png" alt="KATSU — Japanese Comfort Food" width="240" height="120"
+             class="mx-auto w-[180px] md:w-[210px] lg:w-[240px] h-auto" />
+      </div>
+    </section>
+
+    <!-- Botones (bajo el primer scroll en móvil) -->
+    <section class="mt-8 md:mt-10 text-center" data-reveal>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="reserva-malasana.html" class="btn">Reservar — Malasaña</a>
+        <a href="reserva-castellana.html" class="btn">Reservar — Castellana</a>
+      </div>
+    </section>
+
+    <!-- Mosaico + botón de menú -->
+    <section class="mt-12 md:mt-16 text-center">
+      <img src="fotos_ comida.png" alt="Platos y ambiente en KATSU Madrid" loading="lazy"
+           class="mx-auto w-[88%] md:w-[72%] lg:w-[60%] rounded-xl shadow" />
+      <div class="mt-6">
+        <a href="Menu.pdf" target="_blank" rel="noopener" class="btn">Ver menú (PDF)</a>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="mt-16 md:mt-20" data-reveal>
+      <h2 class="text-center text-xl font-semibold text-[#931813]">Contacto</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6 text-sm text-[#931813]">
+        <article class="card rounded-xl p-5">
+          <h3 class="text-lg font-semibold">Malasaña</h3>
+          <p>Calle de la Luna, 22 · 28004 Madrid</p>
+          <p>Tel: <a href="tel:+34912133078" class="underline underline-offset-2 decoration-[#931813]/40 hover:text-[#931813]">912 133 078</a></p>
+          <ul class="mt-2 opacity-90 space-y-1">
+            <li>Martes — Jueves: 13:00–16:30 · 19:30–23:30</li>
+            <li>Viernes — Domingo: 13:00–17:00 · 19:30–23:30</li>
+            <li>Lunes: Cerrado</li>
+          </ul>
+        </article>
+        <article class="card rounded-xl p-5">
+          <h3 class="text-lg font-semibold">Castellana</h3>
+          <p>C. de San Germán, 5 · 28020 Madrid</p>
+          <p>Tel: <a href="tel:+34916125714" class="underline underline-offset-2 decoration-[#931813]/40 hover:text-[#931813]">916 125 714</a></p>
+          <ul class="mt-2 opacity-90 space-y-1">
+            <li>Martes — Jueves: 13:00–16:30 · 19:30–23:30</li>
+            <li>Viernes — Domingo: 13:00–17:00 · 19:30–23:30</li>
+            <li>Lunes: Cerrado</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-black/10 mt-16">
+    <div class="wrap py-10 text-center text-xs text-black/60">© <span id="year"></span> KATSU Madrid</div>
+  </footer>
+
+  <script>
+    // Full-viewport fix for mobile browsers (vh unit bug)
+    function setVh() {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', vh + 'px');
+    }
+    setVh();
+    window.addEventListener('resize', setVh);
+    window.addEventListener('orientationchange', setVh);
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+function setVh(){
+  const h = (window.visualViewport && window.visualViewport.height) ? window.visualViewport.height : window.innerHeight;
+  const vh = h * 0.01;
+  document.documentElement.style.setProperty('--vh', vh + 'px');
+}
+const initVh = () => { setVh(); setTimeout(setVh, 150); };
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initVh);
+} else { initVh(); }
+window.addEventListener('load', () => { document.documentElement.classList.add('boot'); setTimeout(setVh, 250); });
+window.addEventListener('resize', setVh);
+window.addEventListener('orientationchange', setVh);
+if(window.visualViewport){ visualViewport.addEventListener('resize', setVh); visualViewport.addEventListener('scroll', setVh); }
+
+// Reveal-on-scroll using IntersectionObserver
+(function(){
+  const els = document.querySelectorAll('[data-reveal]');
+  if (!('IntersectionObserver' in window) || !els.length) {
+    els.forEach(el => el.classList.add('in'));
+    return;
+  }
+  const obs = new IntersectionObserver((entries, o) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        o.unobserve(e.target);
+      }
+    });
+  }, { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.15 });
+  els.forEach(el => { el.classList.add('reveal'); obs.observe(el); });
+})();
+    </script>
+  </body>
+</html>
